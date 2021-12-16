@@ -1,0 +1,18 @@
+<h1>Lista de los empleados docentes por apellido:</h1>
+
+
+<form method = "GET">{% csrf_token %}
+    <input type="text" name = "kword" id ="kword" placeholder="Ingrese apellido del Docente">
+    <button type="submit">Buscar</button>
+</form>
+
+<h2>resultados de la busqueda:</h2>
+
+<ul>
+    
+    {% for empleado in docente %}
+    <li>{{ empleado }}</li>
+        
+    {% endfor %}
+        
+</ul>

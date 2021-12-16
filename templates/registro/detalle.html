@@ -1,0 +1,44 @@
+
+
+{% extends 'base.html' %}{% load static %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h1>Detalle Del Empleado</h1>
+    </div>
+    <div class="row">
+        <div class="card" style="width:400px">
+            {% if detalle_empleado.photo %}
+            <img class="card-img-top" src={{detalle_empleado.photo.url}}" alt="Card image">
+            {% else %}
+            <img class="card-img-top" src="{% static 'img/photo.jpeg' %}" alt="Card image">
+            {% endif %}
+            <div class="card-body">
+              <h4 class="card-title">{{detalle.last_name}},{{detalle.first_name}}</h4>
+              <p class="card-text">
+                  <ul>
+                      <li>{{detalle.age}}</li>
+                      <li>{{detalle.get_job_display}}</li>
+                      <li>{{detalle.materia}}</li>
+                      <li>{{detalle.oficina}}</li>
+                      
+                  </ul>
+              </p>
+              <a href="{% url 'registro_app:update' detalle.id%}" class="btn btn-primary">Modificar</a>
+            </div>
+        </div>               
+        
+    </div>
+    
+</div>
+
+{% endblock content %}
+    
+
+
+
+
+

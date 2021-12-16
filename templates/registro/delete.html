@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <h2>¿Confirma la eliminacion ?</h2>
+
+    </div>
+    <div class="row">
+        
+<form  method="post">{% csrf_token %} {{form.as_p}}
+    <button class="btn btn-danger" type="submit">Si</button>
+
+</form>
+
+    </div>
+</div>
+
+{% endblock content %}
