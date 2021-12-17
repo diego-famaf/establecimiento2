@@ -10,7 +10,9 @@
         <form class="form-inline" method="GET">{% csrf_token %}
             <input type="text" class="form-control mr-sm-2" placeholder="Inserte texto" id="kword" name="kword">
             <button type="submit" class="btn btn-primary">Buscar</button>
-            
+            {% for empleado in lista  %}
+            <a class="btn btn-info" href="{% url 'registro_app:alta' empleado.id %}">Agregar</a>
+            {% endfor %}
             
             
         </form>
@@ -96,14 +98,3 @@
 
 
 
-<ul>
-    
-    {% for empleado in lista  %}
-    <li>{{ empleado }}</li>
-        
-    {% endfor %}
-        
-
-
-
-</ul>

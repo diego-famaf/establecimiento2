@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'establecimiento.wsgi.application'
 DATABASES = {
     'default' : {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME' : 'dbregistro2',
-        'USER' : 'dbregistro2',
+        'NAME' : 'dbregistro3',
+        'USER' : 'dbregistro3',
         'PASSWORD' : '1234',
         'HOST' : 'localhost',
         'PORT' : '5432',
